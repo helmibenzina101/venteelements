@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison</title>
+
+  
+</head>
+
+
+<body>
+    <h1>Cout du maison</h1>
+    <p>Prix de chambre est egal a 200 dinars</p> 
+    <p>Prix de cuisine est egal a 300 dinars</p> 
+    <p>Prix de salle de bain est egal a 100 dinars</p> 
+    <p>Prix de salon est egal a 500 dinars</p>
+     <p>Prix de balcon est egal a 100 dinars</p> 
+    <label>Nombre des chambres<input type="number" id="a"></label><br>
+    <label>Nombre des salles de bains<input type="number"id="b"></label><br>
+    <label>Nombre des salles des cuisines<input type="nuumber"id="c"></label><br>
+    <label>Nombre des salon<input type="number"id="d"></label><br>
+    <label>Nombre des balcons <input type="number"id="e"></label><br>
+    <label>Estimation du cout du maison <input type="text"id="res" ></label><br>
+    <button  onclick="sum()">Estimation</button>
+    <script>
+         
+        function sum(){
+            let total ;
+            let a;
+            let b;
+            let c;
+            let d;
+            let e;
+            console.log(document.getElementById("a").value);
+            if (document.getElementById("a").value=="")
+            {a=0;}
+            else
+            {a=parseInt(document.getElementById("a").value);}
+            if (document.getElementById("b").value=="")
+            {b=0;}
+            else
+            {b=parseInt(document.getElementById("b").value);}
+            if (document.getElementById("c").value=="")
+            {c=0;}
+            else
+        {c=parseInt(document.getElementById("c").value);}
+        if (document.getElementById("d").value=="")
+            {d=0;}
+            else
+        {d=parseInt(document.getElementById("d").value);}
+        if (document.getElementById("e").value=="")
+            {e=0;}
+            else
+        {e=parseInt(document.getElementById("e").value);}
+        
+         console.log("a="+a+"b="+b+"c="+c+"d="+d+"e="+e)
+         tot=(a*200)+(b*300)+(c*100)+(d*500)+(e*100);
+         console.log(tot)
+         
+         document.getElementById("res").value =tot;
+        }
+         </script>
+</body>
+
+</html>
